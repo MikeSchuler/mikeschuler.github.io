@@ -1,27 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Bio</title>
+  <title>WeatherLat</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- Heading -->
-    <h1>Mike Schuler's Bio</h1>
-    <!-- Image Example -->
-    <img src="http://3kbo302xo3lg2i1rj8450xje-wpengine.netdna-ssl.com/wp-content/uploads/2013/07/IMG_74301.jpg" alt="Mike Schuler">
-    <br>
-    <br>
-    <strong>Mike Schuler's Bio:</strong>
-    <p>Mike Schuler was born "Michael Edward Schuler" on January 24, 1983 in New York, New York.</p>
-    <p>He is the second son of Bernadette and Ken Schuler.</p>
-    <strong>About Me:&nbsp;</strong>
-    <ul>
-        <li>Mike's <a href="https://www.facebook.com/mike.schuler.92">Facebook</a></li>
- 	    <li>Mike's <a href="https://www.instagram.com/mikeeschuler/">Instagram</a></li>
- 	    <li>Mike's <a href="https://twitter.com/MikeSchuler">Twitter</a></li>
- 	    <li>Mike's <a href="mailto:mschuler83@gmail.com">Email</a></li>
-    </ul>
+  <div class="background">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+            aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="file:///Users/Mike/Documents/Web_Homework/index.html" style="color: lightseagreen">WeatherLat&trade;</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav topnav-right">
+            <li class="dropdown nav-item">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                aria-expanded="false">Plots
+                <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="file:///Users/Mike/Documents/Web_Homework/temp-plot.html">Temperature</a></li>
+                <li><a href="file:///Users/Mike/Documents/Web_Homework/humidity-plot.html">Humidity</a></li>
+                <li><a href="file:///Users/Mike/Documents/Web_Homework/wind-plot.html">Wind Speed</a></li>
+                <li><a href="file:///Users/Mike/Documents/Web_Homework/cloudiness-plot.html">Cloudiness</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a href="file:///Users/Mike/Documents/Web_Homework/comparisons.html">Comparison</a></li>
+            <li class="nav-item"><a href="file:///Users/Mike/Documents/Web_Homework/weather-data.html">Data</a></li>
+          </ul>
+          </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    
+    <div class="container">
+      <div class="row">
+        <div class="container background-2 col-md-8">
+          <article>
+            <header>
+              <h2>How Does Latitude Impact Weather?</h2>
+            </header>
+            <br>
+            <img src="https://earth.nullschool.net/sample.jpg" alt="wind map" width="650" height="300">
+            <p style="font-size:10px">Credit: Earth.org</p>
+            <p>Latitude is one of the most important factors in determining what type of climate a location on earth will have.
+
+            <p>At its most basic, latitude is a measure of the distance you are located from the equator and, combined with the tilt of the earth,
+              is the reason we experience seasonal changes in weather.</p>
+            </p>
+            <p>While there are several factors that determine what kind of weather a particular location will have, 
+              the common assumption is that it will be warmer the closer you are to the equater and cooler as you move towards the poles.
+              For example, New York is obviously colder than Florida because it is located further north in the Northern Hemisphere, i.e. New York is located at a higher latitude than Miami.
+            </p><img src="https://github.com/MikeSchuler/api_homework/blob/master/Lat_vs_Temp.png?raw=true" align="left"
+            alt="city_latitude vs temp" width="251" height="167">
+            <p>But how can we prove with relationship with data?
+              And, is there a similar relationship between latitude and other weather factors like cloudiness, wind speed and humidity?
+            </p>
+            <p>For this project, we set out answer these questions. In order to do this, we created a Python script to pull current weather data from the <a href="https://openweathermap.org/api" target="_blank">OpenWeatherMap API</a> and used it to create a dataset of
+              of weather observations from a sample of 500 random cities around the world. With this dataset, we then used Matplotlib's scatter plot feature to visualize the temperature, humidity, wind
+                  speed and cloudiness of each city based on the its latitude.</p>
+      
+              <p>On this website, you will find the source data along with plot visualizations, as well
+              explanations and descriptions of any trends and correlations we discovered throughout our analysis.
+              </p>
+          </article>
+        </div>
+  <!-- Sidebar -->
+        <div class="container background-2 col-md-4">
+          <header>
+            <h2>Visualizations</h2>
+          </header>
+          <a href="file:///Users/Mike/Documents/Web_Homework/temp-plot.html"><img src="https://raw.githubusercontent.com/MikeSchuler/api_homework/master/Lat_vs_Temp.png"
+              alt="latitude vs temperature" width="300" height="199"></a><br>
+          <a href="file:///Users/Mike/Documents/Web_Homework/cloudiness-plot.html"><img src="https://raw.githubusercontent.com/MikeSchuler/api_homework/master/Lat_vs_Cloudiness.png"
+              alt="latitude vs cloudiness" width="300" height="199"></a><br>
+          <a href="file:///Users/Mike/Documents/Web_Homework/humidity-plot.html"><img src="https://raw.githubusercontent.com/MikeSchuler/api_homework/master/Lat_vs_Humidity.png"
+              alt="latitude vs humidity" width="300" height="199"></a><br>
+          <a href="file:///Users/Mike/Documents/Web_Homework/wind-plot.html"><img src="https://raw.githubusercontent.com/MikeSchuler/api_homework/master/Lat_vs_Wind_Speed.png"
+              alt="latitude vs wind speed" width="300" height="199"></a><br><br>
+        </div>
+      </div>
+    </div>
+   <!-- /Sidebar -->
+
+    <!-- <footer class="footer align-items-center"> -->
+    <div class="footer container">
+      <span class="text-muted">&copy Copyright Mike Schuler 2018</span>
+    </div>
+    <!-- </footer> -->
+  </div>
+
 </body>
+
 </html>
